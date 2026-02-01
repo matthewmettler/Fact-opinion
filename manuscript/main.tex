@@ -1,0 +1,151 @@
+% For copyright and license information, see uiucthesis2021.dtx and derivatives.
+\documentclass[12pt]{uiucthesis2021}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{microtype}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage[bookmarksdepth=3,linktoc=all,colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[
+  backend=biber,
+  style=authoryear,
+  doi=false,
+  url=false,
+  isbn=false,
+  maxcitenames=4,  % change to 1 if you want "et al." after first author
+  maxbibnames=99
+]{biblatex}
+\usepackage{xcolor}
+
+\usepackage{graphicx}
+\graphicspath{{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Latex_Document/figs/}}
+
+\usepackage{booktabs,threeparttable}
+\usepackage{siunitx}
+\sisetup{detect-all}
+
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{makecell}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup[figure]{labelfont=bf,textfont=bf}
+\captionsetup[table]{labelfont=bf,textfont=bf}
+% Hyperref + cleveref (order matters)
+
+% \usepackage{ruledchapters}  % example of compliant heading format, uncomment to use
+
+\usepackage{lipsum}  % just for placeholder code
+
+
+
+% uncomment the below to show a grid on all pages
+% \usepackage[grid, gridunit=in, gridcolor=blue!40, subgridcolor=blue!20]{eso-pic}
+
+\addbibresource{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Latex_Document/references.bib}
+
+\newcounter{counterforappendices}
+
+
+\begin{document}
+\doublespacing
+
+\title{Fact-Opinion Differentiation Among Citizens: The Role of Partisan Identity, Cognitive Resources, and Media.}
+\author{Matthew Mettler}
+\department{Political Science}
+\concentration{American Politics}
+\phdthesis
+\degreeyear{2026}
+\committee{
+    Professor Jeffery Mondak, Chair\\
+    Professor Damarys Canache\\
+    Professor Brian Gaines\\
+    Professor Thomas Rudolp}
+\maketitle
+
+\frontmatter
+
+\begin{abstract}
+\ldots.
+\end{abstract}
+
+\begin{dedication}
+
+\end{dedication}
+
+\begin{acknowledgments}
+
+\end{acknowledgments}
+
+{
+    \hypersetup{linkcolor=black}  % disable link coloring locally
+    \tableofcontents
+    % the Graduate College doesn't recommend including lot or lof
+    % \listoftables
+    % \listoffigures
+}
+
+\chapter{List of Abbreviations}
+
+\begin{abbrevlist}
+\item[JA] Judgmental accuracy.
+\item[PRB] Partisan response bias.
+\item[RR] Residual response
+\end{abbrevlist}
+
+\chapter{List of Symbols}
+
+\begin{symbollist}[0.7in]
+\item[$\tau$] Time taken to drink one cup of coffee.
+\item[$\mu$g] Micrograms (of caffeine, generally).
+\end{symbollist}
+
+\mainmatter
+
+\chapter{Introduction}
+\input{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Chapters/Chapter1}
+
+
+\chapter{Measurement approach and validation}
+\input{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Chapters/Chapter2}
+
+\chapter{Accuracy, Bias, or Noise in Political Judgments? A Compositional Approach to Fact-Opinion Classification}
+\input{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Chapters/Chapter3}
+
+\chapter{Media cues as a shortcut to improved fact opinion differentiation}
+\input{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Chapters/Chapter4}
+
+\chapter{Nudging to better information categorization}
+\input{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Chapters/Chapter5}
+
+
+\chapter{Conclusion}
+\input{/Users/mattmettler/Library/CloudStorage/Box-Box/Dissertation/Chapter_latex/Chapters/Chapter6}
+
+
+
+
+
+\backmatter
+
+\printbibliography[heading=bibintoc,title={References}]
+
+% the below lines are only needed if bibliography precedes appendices
+% uses https://tex.stackexchange.com/a/440212 to continue page numbering
+\clearpage
+\setcounter{counterforappendices}{\value{page}}
+\mainmatter
+\setcounter{page}{\value{counterforappendices}}
+
+\appendix
+
+\chapter{Appendix Chapter 3}
+
+\lipsum[1-5]
+
+% \input{Appendix.tex}
+
+\end{document}
